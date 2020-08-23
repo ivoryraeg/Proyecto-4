@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class NaveControles : MonoBehaviour
 {
+    
     public float jumpSpeed = 10f;
     public float Speed = 10f;
     public float RotSpeed = 100f;
@@ -44,9 +46,10 @@ public class NaveControles : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && fireRate <= 0)
         {
             Instantiate(laser, spawnLaser.position, spawnLaser.rotation);
-            fireRate = 0.3f;
+            fireRate = 0.1f;
         }
 
+        Debug.Log(String.Format("" + Time.deltaTime));
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -59,10 +62,15 @@ public class NaveControles : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Death"))
-        {
-            gameObject.GetComponent<ChangeScene>().LoadScene(NextScene);
-        }
-        Destroy(collision.gameObject);
+        
+        //Destroy(collision.gameObject);
     }
+    
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        
+
+    }
+
+    
 }

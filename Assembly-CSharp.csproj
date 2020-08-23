@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -11,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B7A48AB1-9E5A-E94E-0FB2-7E9D6F5C212D}</ProjectGuid>
+    <ProjectGuid>{FA5B2E25-F1EB-BBCF-EA54-9A6463A6BA19}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -54,6 +52,9 @@
     <UnityVersion>2019.4.8f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.8f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -63,7 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\P2DExample\Scripts\BackgroundMovimiento.cs" />
+    <Compile Include="Assets\P2DExample\Scripts\CamaraMovement.cs" />
     <Compile Include="Assets\P2DExample\Scripts\ChangeScene.cs" />
+    <Compile Include="Assets\P2DExample\Scripts\ColisionLimites.cs" />
+    <Compile Include="Assets\P2DExample\Scripts\ElementCreator.cs" />
     <Compile Include="Assets\P2DExample\Scripts\Laser.cs" />
     <Compile Include="Assets\P2DExample\Scripts\MovimientoElementos.cs" />
     <Compile Include="Assets\P2DExample\Scripts\NaveControles.cs" />
@@ -596,85 +600,85 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect.Editor">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Path.Editor">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="PsdPlugin">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Joako/Documents/Unity/Progra 2d/Proyecto 4/Proyecto 4 Parte 1/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Descargas/Proyecto-4-master/Proyecto-4-master/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
