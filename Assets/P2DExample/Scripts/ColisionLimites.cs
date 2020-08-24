@@ -16,21 +16,21 @@ public class ColisionLimites : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < referenceObj.transform.position.x - 14.8f)
+        if (transform.position.x < referenceObj.transform.position.x - 15.15f)
         {
             Respawn();
         }
-        if (transform.position.x > referenceObj.transform.position.x + 14.8f)
+        if (transform.position.x > referenceObj.transform.position.x + 14.15f)
         {
-            transform.position = new Vector3(referenceObj.transform.position.x + 14.9f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(referenceObj.transform.position.x + 14.15f, transform.position.y, transform.position.z);
         }
-        if (transform.position.y > referenceObj.transform.position.y + 6.8f)
+        if (transform.position.y > referenceObj.transform.position.y + 6.5f)
         {
-            transform.position = new Vector3(transform.position.x, referenceObj.transform.position.y + 6.8f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, referenceObj.transform.position.y + 6.5f, transform.position.z);
         }
-        if (transform.position.y < referenceObj.transform.position.y - 6.8f)
+        if (transform.position.y < referenceObj.transform.position.y - 6.5f)
         {
-            transform.position = new Vector3(transform.position.x, referenceObj.transform.position.y - 6.8f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, referenceObj.transform.position.y - 6.5f, transform.position.z);
         }
     }
     private void Respawn()

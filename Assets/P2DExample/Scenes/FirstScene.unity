@@ -265,7 +265,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1897603892}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.72700006, y: 0.731}
   m_AnchorMax: {x: 0.7468496, y: 0.7607244}
@@ -504,7 +504,7 @@ RectTransform:
   m_Children:
   - {fileID: 1411020496}
   m_Father: {fileID: 1897603892}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.63866025, y: 0.256}
   m_AnchorMax: {x: 0.8658302, y: 0.34724024}
@@ -645,7 +645,7 @@ RectTransform:
   m_Children:
   - {fileID: 415741252}
   m_Father: {fileID: 1897603892}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.63866025, y: 0.09086219}
   m_AnchorMax: {x: 0.8658302, y: 0.17720851}
@@ -799,7 +799,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.021911621, y: 0.02947998}
+  m_AnchoredPosition: {x: -0.021972656, y: 0.02947998}
   m_SizeDelta: {x: 0.043945312, y: -0.02947998}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &655788101
@@ -935,12 +935,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1897603892}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.05016991, y: 0.018275617}
   m_AnchorMax: {x: 0.40532038, y: 1}
-  m_AnchoredPosition: {x: -3.5, y: -5.0799866}
-  m_SizeDelta: {x: -0.37042236, y: 10.496094}
+  m_AnchoredPosition: {x: -91.829, y: 50.41}
+  m_SizeDelta: {x: -0.37042236, y: -100.82013}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782591948
 MonoBehaviour:
@@ -963,9 +963,9 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 24
     m_FontStyle: 0
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 80
     m_Alignment: 3
@@ -974,10 +974,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Jueguito de la nave que destruye asteroides, y come rayitos\n\nComienzas
-    el juego con 5 vidas. \n\nPerderas una vida al quedarte al ser atrapado por la
-    camara, ser golpeado por los asteroides, o ser atrapado por los agujeron negros
-    en el camino. \n\nPuedes disparar a los asteroides para destruirlos.\n\nEstos
+  m_Text: "Comienzas el juego con 5 vidas. \n\nPerderas una vida al quedarte al ser
+    atrapado por la camara, ser golpeado por los asteroides, o ser atrapado por los
+    agujeron negros en el camino. \n\nPuedes disparar a los asteroides para destruirlos.\n\nEstos
     daran 100 puntos. Los disparos pueden ser absorbidos por los agujeros negros.\n\nomer
     los rayos que encuentres en el camino aumentara tu nivel de Energia. El nivel
     maximo de enrgia es de 5.\n\nMorir reestablecera tu nivel de Energia a 1. Cada
@@ -992,6 +991,84 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 782591946}
+  m_CullTransparentMesh: 0
+--- !u!1 &873440911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 873440912}
+  - component: {fileID: 873440914}
+  - component: {fileID: 873440913}
+  m_Layer: 0
+  m_Name: Titulo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &873440912
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873440911}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1897603892}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.05016991, y: 0.018275617}
+  m_AnchorMax: {x: 0.40532038, y: 1}
+  m_AnchoredPosition: {x: -91.829346, y: 452.755}
+  m_SizeDelta: {x: 124.77692, y: -689.96}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &873440913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873440911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 24
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 0
+    m_MaxSize: 80
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Jueguito de la nave que destruye asteroides, y come rayitos
+--- !u!222 &873440914
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873440911}
   m_CullTransparentMesh: 0
 --- !u!1 &1069831210
 GameObject:
@@ -1099,7 +1176,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1897603892}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.55, y: 0.64724034}
   m_AnchorMax: {x: 0.6336602, y: 0.8256538}
@@ -1408,7 +1485,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1897603892}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.83877176, y: 0.64724034}
   m_AnchorMax: {x: 0.9178107, y: 0.8256538}
@@ -1622,6 +1699,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 873440912}
   - {fileID: 782591947}
   - {fileID: 527895143}
   - {fileID: 1159558418}
@@ -1633,7 +1711,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.18213153, y: 0.02457885}
   m_AnchorMax: {x: 0.818, y: 0.551}
-  m_AnchoredPosition: {x: -0.075653, y: 113.96}
+  m_AnchoredPosition: {x: -0.07562256, y: 113.95999}
   m_SizeDelta: {x: 418.75134, y: 254.31311}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1897603893
