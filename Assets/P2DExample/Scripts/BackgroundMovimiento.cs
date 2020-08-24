@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackgroundMovimiento : MonoBehaviour
 {
-
+    public GameObject follow;
     Material material;
     Vector2 offset;
 
@@ -26,6 +26,7 @@ public class BackgroundMovimiento : MonoBehaviour
     {
 
         material.mainTextureOffset += offset * Time.deltaTime;
+        this.transform.position = new Vector3(follow.transform.position.x, follow.transform.position.y, follow.transform.position.y);
 
     }
 }

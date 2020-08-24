@@ -7,6 +7,12 @@ TagManager:
   - Death
   - Asteroide
   - Plataforma
+  - Limit
+  - Repos
+  - Limite Inf
+  - Limite Sup
+  - Limite Der
+  - InCamara
   layers:
   - Default
   - TransparentFX

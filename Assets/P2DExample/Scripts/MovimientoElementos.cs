@@ -21,7 +21,6 @@ public class MovimientoElementos : MonoBehaviour
     void Update()
     {
         
-        rg2d.velocity = new Vector2(-transform.right.x, transform.forward.y) * Speed;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -35,7 +34,7 @@ public class MovimientoElementos : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Death"))
+        if (collision.gameObject.CompareTag("Repos"))
         {
             Destroy(gameObject);
         }
