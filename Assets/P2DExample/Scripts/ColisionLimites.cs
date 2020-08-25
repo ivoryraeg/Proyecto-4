@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ColisionLimites : MonoBehaviour
 {
-    public Vector3 respawnPos;
     public GameObject referenceObj;
 
     // Start is called before the first frame update
@@ -18,7 +17,7 @@ public class ColisionLimites : MonoBehaviour
     {
         if (transform.position.x < referenceObj.transform.position.x - 15.15f)
         {
-            Respawn();
+            gameObject.GetComponent<RespawnAndShield>().Respawn();
             gameObject.GetComponent<NaveControles>().vida--;
         }
         if (transform.position.x > referenceObj.transform.position.x + 14.15f)
@@ -34,16 +33,12 @@ public class ColisionLimites : MonoBehaviour
             transform.position = new Vector3(transform.position.x, referenceObj.transform.position.y - 6.5f, transform.position.z);
         }
     }
-    public void Respawn()
-    {
-        respawnPos = new Vector3(referenceObj.transform.position.x, referenceObj.transform.position.y, transform.position.z);
-        transform.position = respawnPos;
-    }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("AgujeroNegro"))
         {
-            gameObject.GetComponent<ColisionLimites>().Respawn();
+            gameObject.GetComponent<RespawnAndShield>().Respawn();
             gameObject.GetComponent<NaveControles>().vida--;
         }
     }
