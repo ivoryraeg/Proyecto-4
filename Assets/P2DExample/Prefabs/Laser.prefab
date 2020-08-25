@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5702973942029116037}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadLaser: 50
-  timeExist: 2
 --- !u!50 &5702973942029116038
 Rigidbody2D:
   serializedVersion: 4

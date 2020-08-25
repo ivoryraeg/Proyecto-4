@@ -9,10 +9,11 @@ TagManager:
   - Plataforma
   - Limit
   - Repos
-  - Limite Inf
-  - Limite Sup
-  - Limite Der
   - InCamara
+  - LaserDestroyer
+  - Laser
+  - AgujeroNegro
+  - PowerUp
   layers:
   - Default
   - TransparentFX
