@@ -11,6 +11,9 @@ TagManager:
   - Repos
   - InCamara
   - LaserDestroyer
+  - Laser
+  - AgujeroNegro
+  - PowerUp
   layers:
   - Default
   - TransparentFX

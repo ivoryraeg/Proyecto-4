@@ -10,6 +10,9 @@ public class NaveControles : MonoBehaviour
     public float Speed = 10f;
     public float RotSpeed = 100f;
     public float fireRate = 0.3f;
+
+    public int vida;
+
     public GameObject laser;
     public Transform spawnLaser;
     bool isColliding;
@@ -20,6 +23,8 @@ public class NaveControles : MonoBehaviour
     void Start()
     {
         rg2d = gameObject.GetComponent<Rigidbody2D>();
+
+        vida = 5;
     }
 
     // Update is called once per frame
@@ -47,6 +52,11 @@ public class NaveControles : MonoBehaviour
         {
             Instantiate(laser, spawnLaser.position, spawnLaser.rotation);
             fireRate = 0.1f;
+        }
+
+        if (vida == 0)
+        {
+            gameObject.GetComponent<ChangeScene>().LoadScene("ThirdScene");
         }
 
         Debug.Log(String.Format("" + Time.deltaTime));
