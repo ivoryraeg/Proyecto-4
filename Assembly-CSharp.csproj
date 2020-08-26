@@ -71,7 +71,6 @@
     <Compile Include="Assets\P2DExample\Scripts\Control.cs" />
     <Compile Include="Assets\P2DExample\Scripts\Destroy.cs" />
     <Compile Include="Assets\P2DExample\Scripts\Disparo.cs" />
-    <Compile Include="Assets\P2DExample\Scripts\ElementCreator.cs" />
     <Compile Include="Assets\P2DExample\Scripts\Follow.cs" />
     <Compile Include="Assets\P2DExample\Scripts\Laser.cs" />
     <Compile Include="Assets\P2DExample\Scripts\LaserDestroyer.cs" />
@@ -80,7 +79,6 @@
     <Compile Include="Assets\P2DExample\Scripts\NaveControles.cs" />
     <Compile Include="Assets\P2DExample\Scripts\Pausa.cs" />
     <Compile Include="Assets\P2DExample\Scripts\PuntajeCreditos.cs" />
-    <Compile Include="Assets\P2DExample\Scripts\Rayo.cs" />
     <Compile Include="Assets\P2DExample\Scripts\RespawnAndShield.cs" />
     <Compile Include="Assets\P2DExample\Scripts\Spawner.cs" />
     <Reference Include="UnityEngine">

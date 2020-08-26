@@ -48,7 +48,8 @@ public class Pausa : MonoBehaviour
     public void MenuPrincipal()
     {
         ChangeScene.changeSceneInstance.LoadScene("FirstScene");
-        
+        Time.timeScale = 1f;
+        isPaused = false;
     }
 
     public void QuitGame()

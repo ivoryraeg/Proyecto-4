@@ -119,9 +119,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.014538247, y: 0}
+  m_Offset: {x: 0.47120577, y: 0}
   serializedVersion: 2
-  m_Radius: 0.51579314
+  m_Radius: 0.9724607
 --- !u!114 &6247328922430713229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,9 +137,6 @@ MonoBehaviour:
   jumpSpeed: 10
   Speed: 20
   RotSpeed: 100
-  fireRate: 0.3
-  laser: {fileID: 0}
-  spawnLaser: {fileID: 0}
   NextScene: ThirdScene
 --- !u!114 &6247328922430713226
 MonoBehaviour:

@@ -1,13 +1,13 @@
 sceneSetups:
 - path: Assets/P2DExample/Scenes/FirstScene.unity
-  isLoaded: 0
+  isLoaded: 1
   isActive: 0
   isSubScene: 0
 - path: Assets/P2DExample/Scenes/SecondScene.unity
-  isLoaded: 0
-  isActive: 0
+  isLoaded: 1
+  isActive: 1
   isSubScene: 0
 - path: Assets/P2DExample/Scenes/ThirdScene.unity
   isLoaded: 1
-  isActive: 1
+  isActive: 0
   isSubScene: 0

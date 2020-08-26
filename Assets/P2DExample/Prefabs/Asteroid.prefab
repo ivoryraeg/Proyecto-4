@@ -134,3 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
+  hitmarkerClip: {fileID: 8300000, guid: 2435d0a0d32476a45a220854727aeea2, type: 3}

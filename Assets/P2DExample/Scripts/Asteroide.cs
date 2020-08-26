@@ -5,10 +5,13 @@ using UnityEngine;
 public class Asteroide : MonoBehaviour
 {
     public int hp;
+    AudioSource audioSource;
+    public AudioClip hitmarkerClip;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         hp = 5;
     }
 
@@ -17,6 +20,7 @@ public class Asteroide : MonoBehaviour
     {
         if (hp <= 0)
         {
+
             NaveComportamientos.instance.puntaje += 500;
             Destroy(gameObject);
         }
@@ -26,6 +30,7 @@ public class Asteroide : MonoBehaviour
     {
         if ( collision.gameObject.CompareTag("Laser"))
         {
+            audioSource.PlayOneShot(hitmarkerClip);
             hp--;
             Destroy(collision.gameObject);
         }

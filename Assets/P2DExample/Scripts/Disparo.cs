@@ -8,6 +8,8 @@ public class Disparo : MonoBehaviour
     private GameObject laserInstance;
     private Laser laserComponent;
     public Transform spawnLaser;
+    AudioSource audioSource;
+    public AudioClip disparoRayoClip;
 
     public Vector3 spawn;
 
@@ -17,15 +19,18 @@ public class Disparo : MonoBehaviour
     {
         spawn = new Vector3(0, 0.35f, 0);
         laserComponent = GetComponent<Laser>();
+        audioSource = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update()
     {
-        
+
         fireRate -= Time.deltaTime;
 
         if (Input.GetKey(KeyCode.Space) && fireRate <= 0)
         {
+
+
             if (NaveComportamientos.instance.powerUpLvl > 2)
             {
                 spawn = new Vector3(0, 0.35f, 0);
@@ -86,6 +91,14 @@ public class Disparo : MonoBehaviour
             {
                 fireRate = 0.1f;
             }
+
+            if (Input.GetKey(KeyCode.Space))
+            {
+                //audioSource.PlayOneShot(disparoRayoClip);
+            }
+
+ 
+
         }
     }
 }

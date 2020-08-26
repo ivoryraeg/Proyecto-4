@@ -24,7 +24,7 @@ public class NaveComportamientos : MonoBehaviour
         puntaje = 0;
         powerUpLvl = 1;
         powerUpTotales = 0;
-        nuevaVida = 25000;
+        nuevaVida = 500;
 
     }
 
@@ -43,7 +43,7 @@ public class NaveComportamientos : MonoBehaviour
 
         if (puntaje >= nuevaVida )
         {
-            nuevaVida += 25000;
+            nuevaVida += 500;
             vida++;
         }
 
