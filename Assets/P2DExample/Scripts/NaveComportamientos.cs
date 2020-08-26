@@ -12,6 +12,9 @@ public class NaveComportamientos : MonoBehaviour
     public int vida;
     public int puntaje;
     public int powerUpLvl;
+    public int powerUpTotales;
+    public int nuevaVida;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,9 @@ public class NaveComportamientos : MonoBehaviour
         vida = 5;
         puntaje = 0;
         powerUpLvl = 1;
+        powerUpTotales = 0;
+        nuevaVida = 25000;
+
     }
 
     // Update is called once per frame
@@ -27,13 +33,30 @@ public class NaveComportamientos : MonoBehaviour
     {
         if (vida == 0)
         {
+            PlayerPrefs.SetInt("score", puntaje);
+            PlayerPrefs.SetInt("powerUps", powerUpTotales);
+            PlayerPrefs.SetFloat("tiempo", Control.controlInstance.tiempo);
+
             gameObject.GetComponent<ChangeScene>().LoadScene("ThirdScene");
+
         }
+
+        if (puntaje >= nuevaVida )
+        {
+            nuevaVida += 25000;
+            vida++;
+        }
+
+        
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("PowerUp"))
         {
+
+            powerUpTotales++;
+
             if (powerUpLvl < 5)
             {
                 powerUpLvl++;

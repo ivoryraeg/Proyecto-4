@@ -6,6 +6,9 @@ using UnityEngine;
 public class Pausa : MonoBehaviour
 {
     public static bool isPaused;
+
+    public GameObject menuPausaUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,15 +31,28 @@ public class Pausa : MonoBehaviour
         }
     }
 
-    private void Resume()
+    public void Resume()
     {
+        menuPausaUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
     }
 
     private void Pause()
     {
+        menuPausaUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+    }
+
+    public void MenuPrincipal()
+    {
+        ChangeScene.changeSceneInstance.LoadScene("FirstScene");
+        
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
