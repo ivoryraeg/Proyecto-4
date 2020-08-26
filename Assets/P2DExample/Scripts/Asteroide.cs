@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Asteroide : MonoBehaviour
 {
-
     public int hp;
 
     // Start is called before the first frame update
@@ -18,6 +17,7 @@ public class Asteroide : MonoBehaviour
     {
         if (hp <= 0)
         {
+            NaveComportamientos.instance.puntaje += 500;
             Destroy(gameObject);
         }
     }
