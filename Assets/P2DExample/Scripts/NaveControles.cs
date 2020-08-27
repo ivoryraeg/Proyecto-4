@@ -5,21 +5,20 @@ using UnityEngine;
 
 public class NaveControles : MonoBehaviour
 {
-    
+    public static NaveControles instance;
+
     public float jumpSpeed = 10f;
     public float Speed = 10f;
     public float RotSpeed = 100f;
 
-    bool isColliding;
-    Rigidbody2D rg2d;
+    public Rigidbody2D rg2d;
     public string NextScene = "FirstScene";
 
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         rg2d = gameObject.GetComponent<Rigidbody2D>();
-
-        
     }
 
     // Update is called once per frame
@@ -41,29 +40,6 @@ public class NaveControles : MonoBehaviour
         {
             rg2d.velocity += new Vector2(-transform.right.x, 0) * Time.deltaTime * Speed;
         }
-
-        Debug.Log(String.Format("" + Time.deltaTime));
-    }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        isColliding = true;
-        Debug.Log(collision.gameObject);
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        isColliding = false;
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-        //Destroy(collision.gameObject);
-    }
-    
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        
-
     }
 
-    
 }

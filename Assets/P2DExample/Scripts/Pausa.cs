@@ -52,6 +52,13 @@ public class Pausa : MonoBehaviour
         isPaused = false;
     }
 
+    public void Restart()
+    {
+        ChangeScene.changeSceneInstance.LoadScene("SecondScene");
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
+
     public void QuitGame()
     {
         Application.Quit();

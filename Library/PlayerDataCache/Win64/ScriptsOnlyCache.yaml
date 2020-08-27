@@ -11,10 +11,12 @@ ScriptsOnlyBuild:
     - Destroy
     - Disparo
     - Follow
+    - GtavitationalPull
     - Laser
     - NaveComportamientos
     - NaveControles
     - Pausa
+    - PuntajeCreditos
     - Rayo
     - RespawnAndShield
     - Spawner
@@ -56,24 +58,28 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11210}
+      Script: {instanceID: 11208}
     - Class: 114
-      Script: {instanceID: 11506}
+      Script: {instanceID: 11504}
     - Class: 114
-      Script: {instanceID: 11562}
+      Script: {instanceID: 11560}
     - Class: 114
-      Script: {instanceID: 12232}
+      Script: {instanceID: 12230}
     - Class: 114
-      Script: {instanceID: 12626}
+      Script: {instanceID: 12624}
     - Class: 114
-      Script: {instanceID: 12944}
+      Script: {instanceID: 12942}
     - Class: 114
-      Script: {instanceID: 13718}
+      Script: {instanceID: 13716}
     - Class: 114
-      Script: {instanceID: 14328}
+      Script: {instanceID: 14326}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -121,56 +127,62 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11210}
+      Script: {instanceID: 11208}
     - Class: 114
-      Script: {instanceID: 11350}
+      Script: {instanceID: 11348}
     - Class: 114
-      Script: {instanceID: 11408}
+      Script: {instanceID: 11406}
     - Class: 114
-      Script: {instanceID: 11464}
+      Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11506}
+      Script: {instanceID: 11504}
     - Class: 114
-      Script: {instanceID: 11536}
+      Script: {instanceID: 11534}
     - Class: 114
-      Script: {instanceID: 11562}
+      Script: {instanceID: 11560}
     - Class: 114
-      Script: {instanceID: 11610}
+      Script: {instanceID: 11608}
     - Class: 114
-      Script: {instanceID: 12134}
+      Script: {instanceID: 12132}
     - Class: 114
-      Script: {instanceID: 12150}
+      Script: {instanceID: 12148}
     - Class: 114
-      Script: {instanceID: 12232}
+      Script: {instanceID: 12230}
     - Class: 114
-      Script: {instanceID: 12254}
+      Script: {instanceID: 12252}
     - Class: 114
-      Script: {instanceID: 12350}
+      Script: {instanceID: 12348}
     - Class: 114
-      Script: {instanceID: 12626}
+      Script: {instanceID: 12624}
     - Class: 114
-      Script: {instanceID: 12750}
+      Script: {instanceID: 12748}
     - Class: 114
-      Script: {instanceID: 12944}
+      Script: {instanceID: 12942}
     - Class: 114
-      Script: {instanceID: 13052}
+      Script: {instanceID: 13050}
     - Class: 114
-      Script: {instanceID: 13240}
+      Script: {instanceID: 13238}
     - Class: 114
-      Script: {instanceID: 13498}
+      Script: {instanceID: 13496}
     - Class: 114
-      Script: {instanceID: 13572}
+      Script: {instanceID: 13570}
     - Class: 114
-      Script: {instanceID: 13604}
+      Script: {instanceID: 13602}
     - Class: 114
-      Script: {instanceID: 13618}
+      Script: {instanceID: 13616}
     - Class: 114
-      Script: {instanceID: 13718}
+      Script: {instanceID: 13716}
     - Class: 114
-      Script: {instanceID: 14328}
+      Script: {instanceID: 14326}
+    - Class: 114
+      Script: {instanceID: 35026}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -204,18 +216,30 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11210}
+      Script: {instanceID: 11208}
     - Class: 114
-      Script: {instanceID: 11506}
+      Script: {instanceID: 11504}
     - Class: 114
-      Script: {instanceID: 11562}
+      Script: {instanceID: 11560}
     - Class: 114
-      Script: {instanceID: 12150}
+      Script: {instanceID: 12230}
     - Class: 114
-      Script: {instanceID: 13718}
+      Script: {instanceID: 12624}
+    - Class: 114
+      Script: {instanceID: 12942}
+    - Class: 114
+      Script: {instanceID: 13716}
+    - Class: 114
+      Script: {instanceID: 14326}
+    - Class: 114
+      Script: {instanceID: 14358}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -289,7 +313,7 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
-      Hash: 5add43244afd33821462c7e95c1f1a45
+      Hash: c7335935a903a01aed84eba1a8740411
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Spawner
@@ -313,7 +337,7 @@ ScriptsOnlyBuild:
     className: Scrollbar
   - hash:
       serializedVersion: 2
-      Hash: 503bbd4afef6f6ce9bb8392e86e8ec56
+      Hash: ef90a40a5d9cd4d3acdd9db01cf4e020
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NaveControles
@@ -463,13 +487,13 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 4becba2409132e0ca24886c70d8da3c9
+      Hash: 1417a17be3b569e19eb701da5460b48b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Laser
   - hash:
       serializedVersion: 2
-      Hash: bbc645b4ddb07eec2604eeea7152240c
+      Hash: a8c57057ecececcaae393cd9042e0ac4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Control
@@ -523,7 +547,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 077155d1e4f82d064b6934f6e9699f8f
+      Hash: ddbc461ec072f35f528777f6109ef83b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NaveComportamientos
@@ -595,7 +619,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: aaced8d5c8455168b4eef5126a1c0a6f
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AgujeroNegro
@@ -619,7 +643,7 @@ ScriptsOnlyBuild:
     className: InputField
   - hash:
       serializedVersion: 2
-      Hash: 02291842f6ff0c2f93d8358b087a1a3c
+      Hash: db4791b1e058672e2d5d0dcfa99285d7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Disparo
@@ -691,7 +715,7 @@ ScriptsOnlyBuild:
     className: Follow
   - hash:
       serializedVersion: 2
-      Hash: 7b27c87d5bbeeb1801942cbcc63ac1c1
+      Hash: eae903eca910d13c85c57cd204e33dab
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Asteroide
@@ -817,6 +841,12 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
+      Hash: 22a97079c837a16d49c6a03a3e8508f9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PuntajeCreditos
+  - hash:
+      serializedVersion: 2
       Hash: 7072231382eb3c4871b3dd75ad0227e1
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -833,10 +863,16 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GtavitationalPull
   platform: 19
   scenePathNames:
   - Assets/P2DExample/Scenes/FirstScene.unity
   - Assets/P2DExample/Scenes/SecondScene.unity
   - Assets/P2DExample/Scenes/ThirdScene.unity
-  playerPath: C:/Users/Joako/Desktop/Proyecto 4 Parte 1/Proyecto 4 Parte 1_Data/Proyecto
-    4 Parte 1.exe
+  playerPath: C:/Users/Kevin/Desktop/Jueguito de la nave que destruye asteroides 
+    y come rayitos/Proyecto 4 Parte 3.exe

@@ -51,6 +51,7 @@ public class RespawnAndShield : MonoBehaviour
     {
         NaveComportamientos.instance.powerUpLvl = 1;
         invulnerable = true;
+        invulnerableTimer = timer;
         respawnPos = new Vector3(referenceObj.transform.position.x, referenceObj.transform.position.y, transform.position.z);
         transform.position = respawnPos;
         ShieldGenerator();
@@ -60,6 +61,7 @@ public class RespawnAndShield : MonoBehaviour
     {
         if (invulnerable && !shield)
         {
+
             shield = true;
             collider.isTrigger = true;
             shieldObject = Instantiate(shieldObjectPrefab, transform.position, shieldObjectPrefab.transform.rotation);

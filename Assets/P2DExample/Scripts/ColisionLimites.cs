@@ -19,11 +19,16 @@ public class ColisionLimites : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < referenceObj.transform.position.x - 13f)
+        if (respawn.invulnerable  && transform.position.x < referenceObj.transform.position.x - 12f)
+        {
+            transform.position = new Vector3(referenceObj.transform.position.x - 12f, transform.position.y, transform.position.z);
+        }
+        else if (!respawn.invulnerable && transform.position.x < referenceObj.transform.position.x - 13f)
         {
             respawn.Respawn();
             naveComportamientos.vida--;
         }
+
         if (transform.position.x > referenceObj.transform.position.x + 12f)
         {
             transform.position = new Vector3(referenceObj.transform.position.x + 12f, transform.position.y, transform.position.z);
@@ -36,10 +41,5 @@ public class ColisionLimites : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, referenceObj.transform.position.y - 6.5f, transform.position.z);
         }
-    }
-    
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
     }
 }

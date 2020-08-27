@@ -9,6 +9,9 @@ public class NaveComportamientos : MonoBehaviour
 
     public static NaveComportamientos instance;
 
+    AudioSource audioSource;
+    public AudioClip slurpClip;
+
     public int vida;
     public int puntaje;
     public int powerUpLvl;
@@ -18,13 +21,15 @@ public class NaveComportamientos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = Camera.main.GetComponent<AudioSource>();
+
         instance = this;
         respawnAndShield = GetComponent<RespawnAndShield>();
         vida = 5;
         puntaje = 0;
         powerUpLvl = 1;
         powerUpTotales = 0;
-        nuevaVida = 500;
+        nuevaVida = 5000;
 
     }
 
@@ -43,25 +48,22 @@ public class NaveComportamientos : MonoBehaviour
 
         if (puntaje >= nuevaVida )
         {
-            nuevaVida += 500;
+            nuevaVida += 5000;
             vida++;
         }
-
-        
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("PowerUp"))
         {
-
+            audioSource.PlayOneShot(slurpClip);
             powerUpTotales++;
 
             if (powerUpLvl < 5)
             {
                 powerUpLvl++;
             }
-            puntaje += 5000;
+            puntaje += 1000;
             Destroy(collision.gameObject);
         }
         if (!respawnAndShield.invulnerable && collision.gameObject.CompareTag("AgujeroNegro"))

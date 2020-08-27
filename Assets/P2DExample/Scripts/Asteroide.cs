@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class Asteroide : MonoBehaviour
 {
+    public Rigidbody2D rg2d;
+
     public int hp;
     AudioSource audioSource;
     public AudioClip hitmarkerClip;
+    public AudioClip popClip;
 
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        rg2d = gameObject.GetComponent<Rigidbody2D>();
+
+        audioSource = Camera.main.GetComponent<AudioSource>();
         hp = 5;
     }
 
@@ -20,8 +25,8 @@ public class Asteroide : MonoBehaviour
     {
         if (hp <= 0)
         {
-
-            NaveComportamientos.instance.puntaje += 500;
+            audioSource.PlayOneShot(popClip);
+            NaveComportamientos.instance.puntaje += 100;
             Destroy(gameObject);
         }
     }

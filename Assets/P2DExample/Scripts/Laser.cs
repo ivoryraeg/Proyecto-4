@@ -5,7 +5,7 @@ using UnityEngine;
 public class Laser : MonoBehaviour
 {
     public float velocidadLaser;
-    Rigidbody2D rg2d;
+    public Rigidbody2D rg2d;
 
     private float dir_x, dir_y;
     private void Awake()
