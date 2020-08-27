@@ -4,26 +4,34 @@ using UnityEngine;
 
 public class ColisionLimites : MonoBehaviour
 {
-    public Vector3 respawnPos;
     public GameObject referenceObj;
+
+    private RespawnAndShield respawn;
+    private NaveComportamientos naveComportamientos;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        respawn = GetComponent<RespawnAndShield>();
+        naveComportamientos = GetComponent<NaveComportamientos>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < referenceObj.transform.position.x - 15.15f)
+        if (respawn.invulnerable  && transform.position.x < referenceObj.transform.position.x - 12f)
         {
-            Respawn();
-            gameObject.GetComponent<NaveControles>().vida--;
+            transform.position = new Vector3(referenceObj.transform.position.x - 12f, transform.position.y, transform.position.z);
         }
-        if (transform.position.x > referenceObj.transform.position.x + 14.15f)
+        else if (!respawn.invulnerable && transform.position.x < referenceObj.transform.position.x - 13f)
         {
-            transform.position = new Vector3(referenceObj.transform.position.x + 14.15f, transform.position.y, transform.position.z);
+            respawn.Respawn();
+            naveComportamientos.vida--;
+        }
+
+        if (transform.position.x > referenceObj.transform.position.x + 12f)
+        {
+            transform.position = new Vector3(referenceObj.transform.position.x + 12f, transform.position.y, transform.position.z);
         }
         if (transform.position.y > referenceObj.transform.position.y + 6.5f)
         {
@@ -32,19 +40,6 @@ public class ColisionLimites : MonoBehaviour
         if (transform.position.y < referenceObj.transform.position.y - 6.5f)
         {
             transform.position = new Vector3(transform.position.x, referenceObj.transform.position.y - 6.5f, transform.position.z);
-        }
-    }
-    public void Respawn()
-    {
-        respawnPos = new Vector3(referenceObj.transform.position.x, referenceObj.transform.position.y, transform.position.z);
-        transform.position = respawnPos;
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("AgujeroNegro"))
-        {
-            gameObject.GetComponent<ColisionLimites>().Respawn();
-            gameObject.GetComponent<NaveControles>().vida--;
         }
     }
 }
